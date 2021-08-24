@@ -22,6 +22,8 @@ CanYou common components package
 * [ ] About Us
 * [ ] Feedback
 * [ ] Common buttons pattern
+* [x] Get the cache size
+* [x] Android Double-click Back to Return to App
 
 ## Requirements
 
