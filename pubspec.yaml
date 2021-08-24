@@ -12,6 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # 获取app基本目录       # https://pub.flutter-io.cn/packages/path_provider
+  path_provider: ^2.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
