@@ -1,6 +1,6 @@
+import 'package:canyou_widget/cache_util.dart';
 import 'package:canyou_widget/canyou_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:canyou_widget/cache_util.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {

@@ -4,7 +4,7 @@
 
 [中文请移步此处](./README_CN.md)
 
-# 内容
+## 内容
 
 - [特征](#features)
 - [要求](#requirements)
@@ -14,16 +14,16 @@
 
 ## 特征
 
-* [ ] 多语言支持
-* [ ] CellItemWidget
-* [ ] TextfildWidget
-* [ ] 警报
-* [ ] 协议弹出
-* [ ] 关于我们
-* [ ] 回馈
-* [ ] 常用按钮模式
-* [x] 获取缓存大小
-* [x] Android 双击返回键退出App
+- [ ] 多语言支持
+- [ ] CellItemWidget
+- [ ] TextfildWidget
+- [ ] 警报
+- [ ] 协议弹出
+- [ ] 关于我们
+- [ ] 回馈
+- [ ] 常用按钮模式
+- [x] 获取缓存大小
+- [x] Android 双击返回键退出App
 
 ## 要求
 
@@ -34,11 +34,10 @@
 
 ```yaml
 dependencies:
-  canyou_widget: ^0.0.1
+  canyou_widget: ^0.0.1+1
 ```
 
 ## 例子
-
 
 ## 执照
 

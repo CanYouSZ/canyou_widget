@@ -4,7 +4,7 @@ CanYou common components package
 
 [中文请移步此处](./README_CN.md)
 
-# Content
+## Content
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -14,16 +14,16 @@ CanYou common components package
 
 ## Features
 
-* [ ] Multilingual support
-* [ ] CellItemWidget
-* [ ] TextFildWidget
-* [ ] Alert
-* [ ] Agreement popup 
-* [ ] About Us
-* [ ] Feedback
-* [ ] Common buttons pattern
-* [x] Get the cache size
-* [x] Android Double-click Back to Return to App
+- [ ] Multilingual support
+- [ ] CellItemWidget
+- [ ] TextFildWidget
+- [ ] Alert
+- [ ] Agreement popup
+- [ ] About Us
+- [ ] Feedback
+- [ ] Common buttons pattern
+- [x] Get the cache size
+- [x] Android Double-click Back to Return to App
 
 ## Requirements
 
@@ -34,11 +34,10 @@ CanYou common components package
 
 ```yaml
 dependencies:
-  canyou_widget: ^0.0.1
+  canyou_widget: ^0.0.1+1
 ```
 
 ## Example
-
 
 ## License
 
