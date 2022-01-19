@@ -34,7 +34,7 @@ CanYou common components package
 
 ```yaml
 dependencies:
-  canyou_widget: ^0.0.1+1
+  canyou_widget: ^0.0.1+2
 ```
 
 ## Example

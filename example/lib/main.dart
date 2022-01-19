@@ -1,9 +1,7 @@
-import 'package:canyou_widget/cache_util.dart';
 import 'package:canyou_widget/canyou_widget.dart';
 import 'package:example/cache_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(MyApp());

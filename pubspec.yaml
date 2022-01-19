@@ -1,6 +1,6 @@
 name: canyou_widget
 description: CanYou software common components package.Contains commonly used widgets, utility classes, and common libraries to unify the project widget style and avoid repetitive work. For details, see the documentation.
-version: 0.0.1+1
+version: 0.0.1+2
 homepage: https://github.com/CanYouSZ/canyou_widget
 repository: https://github.com/CanYouSZ/canyou_widget
 
