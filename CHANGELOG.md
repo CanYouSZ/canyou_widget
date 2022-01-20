@@ -1,3 +1,6 @@
+## 0.0.1+2-nullsafety.0
+* Migrate to non-nullable.
+
 ## 0.0.1+2
 * Add item_normal_widget
 * Update the demo (Add get cache Demo)

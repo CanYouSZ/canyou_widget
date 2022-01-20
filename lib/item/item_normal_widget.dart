@@ -19,8 +19,7 @@ class ItemNormalWidget extends StatelessWidget {
     this.trailing,
     this.contentPadding,
     this.onTap,
-  })  : assert(title != null),
-        super(key: key);
+  }) : super(key: key);
 
   final Widget? leading;
 
@@ -55,8 +54,6 @@ class ItemNormalWidget extends StatelessWidget {
     required Iterable<Widget> childs,
     Divider divider = const Divider(height: 0.0),
   }) sync* {
-    assert(childs != null);
-
     final Iterator<Widget> iterator = childs.iterator;
     final bool isNotEmpty = iterator.moveNext();
 
@@ -88,9 +85,9 @@ class ItemNormalWidget extends StatelessWidget {
     Icon? icon,
     required String title,
     String? subtitle,
+    Widget? trailing = const Icon(Icons.chevron_right),
     final GestureTapCallback? onTap,
   }) {
-    assert(title != null);
     return ItemNormalWidget(
       leading: icon,
       title: Text(title),
@@ -101,7 +98,7 @@ class ItemNormalWidget extends StatelessWidget {
               maxLines: 1,
             )
           : null,
-      trailing: onTap != null ? const Icon(Icons.chevron_right) : null,
+      trailing: trailing,
       onTap: onTap,
     );
   }
@@ -120,7 +117,6 @@ class ItemNormalWidget extends StatelessWidget {
     bool value = false,
     final ValueChanged<bool>? onChanged,
   }) {
-    assert(title != null);
     Widget switchWidget;
     if (Platform.isAndroid) {
       switchWidget = Switch(
@@ -158,7 +154,6 @@ class ItemNormalWidget extends StatelessWidget {
     int? subtitleMaxLines,
     final GestureTapCallback? onTap,
   }) {
-    assert(title != null);
     return ItemNormalWidget(
       leading: leading,
       title: Text(title),
@@ -194,6 +189,33 @@ class ItemNormalWidget extends StatelessWidget {
     return null;
   }
 
+  /// 右侧无图标selectItem定义
+  /// [icon] 左侧图标,可不定义
+  ///
+  /// [title] 标题文本
+  ///
+  /// [subtitle] 内容文本
+  ///
+  /// [onTap] 点击事件
+  static Widget selectItem({
+    Widget? leading,
+    required String title,
+    String? subtitle,
+    final GestureTapCallback? onTap,
+  }) {
+    return ItemNormalWidget(
+      leading: leading,
+      title: Text(title),
+      subtitle: subtitle != null
+          ? Text(
+              subtitle,
+              overflow: TextOverflow.ellipsis,
+            )
+          : null,
+      onTap: onTap,
+    );
+  }
+
   Color _textColor(
       ThemeData theme, ItemTileTheme tileTheme, Color defaultColor) {
     // if (!enabled) return theme.disabledColor;
@@ -218,17 +240,15 @@ class ItemNormalWidget extends StatelessWidget {
 
   TextStyle _titleTextStyle(ThemeData theme, ItemTileTheme tileTheme) {
     TextStyle style = theme.textTheme.subtitle1!;
-    if (tileTheme != null) {
-      switch (tileTheme.style) {
-        case ListTileStyle.drawer:
-          style = theme.textTheme.bodyText1!;
-          break;
-        case ListTileStyle.list:
-          style = theme.textTheme.subtitle1!;
-          break;
-        default:
-          break;
-      }
+    switch (tileTheme.style) {
+      case ListTileStyle.drawer:
+        style = theme.textTheme.bodyText1!;
+        break;
+      case ListTileStyle.list:
+        style = theme.textTheme.subtitle1!;
+        break;
+      default:
+        break;
     }
     final Color color = _textColor(theme, tileTheme, style.color!);
     return style.copyWith(color: color);
@@ -378,7 +398,6 @@ class ItemTileTheme extends InheritedTheme {
     double minHeight = defaultItemHeight,
     required Widget child,
   }) {
-    assert(child != null);
     return Builder(
       builder: (BuildContext context) {
         final ItemTileTheme parent = ItemTileTheme.of(context);

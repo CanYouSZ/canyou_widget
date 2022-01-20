@@ -34,9 +34,8 @@ Future<double> _getTotalSizeOfFilesInDir(final FileSystemEntity file) async {
       }
       // 递归其他文件夹
       final List<FileSystemEntity> children = file.listSync();
-      if (children != null)
-        for (final FileSystemEntity child in children)
-          total += await _getTotalSizeOfFilesInDir(child);
+      for (final FileSystemEntity child in children)
+        total += await _getTotalSizeOfFilesInDir(child);
       return total;
     }
     return total;
@@ -83,9 +82,6 @@ Future<FileSystemEntity?> delDir(FileSystemEntity file) async {
 
 ///格式化文件大小
 String _renderSize(double value) {
-  if (null == value) {
-    return '0.00B';
-  }
   final List<String> unitArr = <String>['B', 'K', 'M', 'G', 'T'];
   int index = 0;
   // 下标不超过数组下标(最大单位T)

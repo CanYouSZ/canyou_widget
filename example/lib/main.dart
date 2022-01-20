@@ -112,6 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       );
                     },
                   ),
+                  ItemNormalWidget.selectItem(title: 'No right trailing'),
                   ListTile(
                     leading: const Icon(CupertinoIcons.settings),
                     minLeadingWidth: 0.0,

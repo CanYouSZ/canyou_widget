@@ -36,7 +36,7 @@ analyzer:
     # 详情请参阅 https://github.com/flutter/flutter/pull/24528。
     sdk_version_async_exported_from_core: ignore
     # 关闭直到空安全部署完成。
-    unnecessary_null_comparison: ignore
+    # unnecessary_null_comparison: ignore
 
     always_put_required_named_parameters_first: error
     avoid_relative_lib_imports: error

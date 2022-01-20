@@ -38,9 +38,7 @@ class _DoubleTapBackExitAppState extends State<DoubleTapBackExitApp> {
     if (_lastTime == null ||
         DateTime.now().difference(_lastTime!) > widget.duration) {
       _lastTime = DateTime.now();
-      if (widget.showMessage != null) {
-        widget.showMessage();
-      }
+      widget.showMessage();
       return Future<bool>.value(false);
     }
     return Future<bool>.value(true);
